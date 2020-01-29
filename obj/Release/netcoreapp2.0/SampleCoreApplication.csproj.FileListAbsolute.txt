@@ -1,0 +1,11 @@
+D:\Samples_App\SampleCoreApplication\SampleCoreApplication\bin\Release\netcoreapp2.0\SampleCoreApplication.deps.json
+D:\Samples_App\SampleCoreApplication\SampleCoreApplication\bin\Release\netcoreapp2.0\SampleCoreApplication.runtimeconfig.json
+D:\Samples_App\SampleCoreApplication\SampleCoreApplication\bin\Release\netcoreapp2.0\SampleCoreApplication.runtimeconfig.dev.json
+D:\Samples_App\SampleCoreApplication\SampleCoreApplication\bin\Release\netcoreapp2.0\SampleCoreApplication.dll
+D:\Samples_App\SampleCoreApplication\SampleCoreApplication\bin\Release\netcoreapp2.0\SampleCoreApplication.pdb
+D:\Samples_App\SampleCoreApplication\SampleCoreApplication\obj\Release\netcoreapp2.0\SampleCoreApplication.csproj.CoreCompileInputs.cache
+D:\Samples_App\SampleCoreApplication\SampleCoreApplication\obj\Release\netcoreapp2.0\SampleCoreApplication.AssemblyInfoInputs.cache
+D:\Samples_App\SampleCoreApplication\SampleCoreApplication\obj\Release\netcoreapp2.0\SampleCoreApplication.AssemblyInfo.cs
+D:\Samples_App\SampleCoreApplication\SampleCoreApplication\obj\Release\netcoreapp2.0\SampleCoreApplication.dll
+D:\Samples_App\SampleCoreApplication\SampleCoreApplication\obj\Release\netcoreapp2.0\SampleCoreApplication.pdb
+D:\Samples_App\SampleCoreApplication\SampleCoreApplication\obj\Release\netcoreapp2.0\SampleCoreApplication.csprojAssemblyReference.cache
