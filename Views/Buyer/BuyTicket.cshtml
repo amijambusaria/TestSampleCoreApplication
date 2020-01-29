@@ -1,0 +1,116 @@
+﻿@model SampleCoreApplication.Models.Buyer
+@{
+    ViewData["Title"] = "BuyTicket";
+}
+
+
+@*<h2>BuyTicket</h2>
+
+<h4>Buyer</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+
+        <form asp-action="BuyTicket">
+            <div class="form-group">
+
+                <label id="lblTimeOut" style="font-size:xx-large;color:red" class="text-danger"></label>
+            </div>
+            <div class="timer timer-example" data-seconds-left=@ViewBag.EventTimeOutToDisplay></div>
+            @*data-minutes-left*@
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none;">
+                <label asp-for="EventId" class="control-label"></label>
+                <input asp-for="EventId" class="form-control" value="1" />
+                <span asp-validation-for="EventId" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none;">
+                <label asp-for="TesterKey" class="control-label"></label>
+                <input asp-for="TesterKey" class="form-control" value="amijambusaria1386" />
+                <span asp-validation-for="TesterKey" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuyerName" class="control-label"></label>
+                <input asp-for="BuyerName" class="form-control" />
+                <span asp-validation-for="BuyerName" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">
+                <input type="submit" id="btnBuy" value="Buy" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@*For CountdownTimer Jquery Files*@
+
+<style>
+    .timer {
+        display: -webkit-inline-box;
+        font-size: -webkit-xxx-large;
+    }
+
+    #controls {
+        display: -webkit-inline-box;
+    }
+
+        #controls > div {
+            margin: 5px;
+        }
+
+    .jst-timeout {
+        color: red
+    }
+</style>
+
+@*End For CountdownTimer Jquery Files*@
+
+
+@section Scripts {
+
+    @*For CountdownTimer Jquery Files*@
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery/jquery-countdown-timer-control.js"></script>
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#lblTimeOut").text("");
+            //Once Any user buy a ticket, hide a buy button and stop timer
+             @{
+                 var message = ViewBag.successMessage;
+             }
+            var message = '@message';
+            if(message){
+                $("#btnBuy").hide();
+            }
+
+            var myTimer = $('.timer-example').startTimer({
+                onComplete: function (element) {
+                    if (message) {
+                        $("#lblTimeOut").text(message);
+                    }
+                    else {
+                        $("#lblTimeOut").text('Time Expired');
+                    }
+                    $("#btnBuy").hide();
+                    //alert('Time out');//console.log('Complete');
+                }
+
+            });
+
+            myTimer.trigger('start');
+        })
+    </script>
+}
+
+
+
